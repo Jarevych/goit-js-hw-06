@@ -12,3 +12,16 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const listEl = document.querySelector(".gallery");
+listEl.style.listStyle = "none"
+listEl.style.display = "flex"
+listEl.style.flexWrap = "wrap"
+listEl.style.gap = "40px"
+
+const createImgListEl = images.map((image) => `<li class=item><img src= ${image.url}, alt= ${image.alt} width = 350px,></li>`)
+  .join("");
+
+
+listEl.innerHTML = createImgListEl
+
